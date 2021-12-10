@@ -1,0 +1,53 @@
+<?php
+session_unset();
+session_destroy();
+?>
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <TITLE>FSU Faculty and Course Evaluations</TITLE>
+</HEAD>
+
+<BODY>
+<H1 ALIGN="CENTER">FSU Faculty and Course Evaluations</H1>
+
+<FORM METHOD="POST" ACTION="selectCollege.php">
+    <INPUT TYPE="HIDDEN" NAME="revType" VALUE="Professor">
+    <INPUT TYPE="HIDDEN" NAME="view" VALUE=FALSE>
+    <INPUT TYPE="SUBMIT" VALUE="REVIEW PROFESSORS">
+</FORM>
+
+<FORM METHOD="POST" ACTION="selectCollege.php">
+    <INPUT TYPE="HIDDEN" NAME="revType" VALUE="Course">
+    <INPUT TYPE="HIDDEN" NAME="view" VALUE=FALSE>
+    <INPUT TYPE="SUBMIT" VALUE="REVIEW COURSES">
+</FORM>
+
+<FORM METHOD="POST" ACTION="selectCollege.php">
+    <INPUT TYPE="HIDDEN" NAME="revType" VALUE="Professor">
+    <INPUT TYPE="HIDDEN" NAME="view" VALUE=TRUE>
+    <INPUT TYPE="SUBMIT" VALUE="VIEW PROFESSOR REVIEWS">
+</FORM>
+
+<FORM METHOD="POST" ACTION="selectCollege.php">
+    <INPUT TYPE="HIDDEN" NAME="revType" VALUE="Course">
+    <INPUT TYPE="HIDDEN" NAME="view" VALUE=TRUE>
+    <INPUT TYPE="SUBMIT" VALUE="VIEW COURSE REVIEWS">
+</FORM>
+
+<FORM METHOD="POST" ACTION="attemptDelete.php">
+    <INPUT TYPE="SUBMIT" VALUE="DELETE REVIEW">
+</FORM>
+
+<FORM METHOD="POST" ACTION="addToTables.php">
+    <INPUT TYPE="SUBMIT" VALUE="MISSING SOMETHING?">
+</FORM>
+
+<FORM METHOD="POST" ACTION="wrongInfo.php">
+    <INPUT TYPE="SUBMIT" VALUE="WRONG INFO?">
+</FORM>
+
+</BODY>
+
+</HTML>
